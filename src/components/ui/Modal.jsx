@@ -27,21 +27,26 @@ export default function Modal({ open, onClose, title, size = 'md', children, cla
         className={cn(
           'bg-white dark:bg-slate-900 w-full flex flex-col',
           'rounded-t-3xl sm:rounded-2xl shadow-2xl',
-          'max-h-[92vh] sm:max-h-[90vh]',
+          'max-h-[93dvh] sm:max-h-[90vh]',
           SIZE[size] || SIZE.md,
           className
         )}
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Drag handle — mobile only */}
+        <div className="sm:hidden flex justify-center pt-3 pb-1 flex-shrink-0">
+          <div className="w-10 h-1 rounded-full bg-slate-200 dark:bg-slate-700" />
+        </div>
+
         {title && (
-          <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-slate-100 dark:border-slate-800 flex-shrink-0">
+          <div className="flex items-center justify-between px-4 sm:px-6 pt-3 sm:pt-5 pb-3 sm:pb-4 border-b border-slate-100 dark:border-slate-800 flex-shrink-0">
             <h2 className="text-base font-bold text-slate-900 dark:text-white">{title}</h2>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+              className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
               aria-label="Fechar"
             >
-              <LuX className="w-4 h-4" />
+              <LuX className="w-5 h-5" />
             </button>
           </div>
         )}

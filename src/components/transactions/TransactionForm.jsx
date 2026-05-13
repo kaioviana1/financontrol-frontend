@@ -64,7 +64,7 @@ export default function TransactionForm({ transaction, categories, onSave, onClo
   return (
     <Modal open onClose={onClose} title={isEdit ? 'Editar transação' : 'Nova transação'}>
       <form onSubmit={handleSubmit} noValidate className="flex flex-col flex-1 overflow-hidden">
-        <div className="overflow-y-auto flex-1 px-6 py-5 space-y-4">
+        <div className="overflow-y-auto flex-1 px-4 sm:px-6 py-4 sm:py-5 space-y-4">
 
           {/* Type toggle */}
           <div className="grid grid-cols-2 gap-1.5 p-1 bg-slate-100 dark:bg-slate-800 rounded-xl">
@@ -151,7 +151,7 @@ export default function TransactionForm({ transaction, categories, onSave, onClo
         </div>
 
         {/* Footer */}
-        <div className="flex gap-3 px-6 pb-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex-shrink-0">
+        <div className="flex gap-3 px-4 sm:px-6 pb-5 sm:pb-5 pt-3 sm:pt-4 border-t border-slate-100 dark:border-slate-800 flex-shrink-0">
           <button type="button" onClick={onClose} className="btn-secondary flex-1">
             Cancelar
           </button>
