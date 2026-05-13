@@ -1,0 +1,7 @@
+# FinanControl — robots.txt
+# This is a private financial application. Disallow all crawlers.
+
+User-agent: *
+Disallow: /
+
+# Sitemap: https://seudominio.com/sitemap.xml
